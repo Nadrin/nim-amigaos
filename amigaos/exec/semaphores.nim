@@ -4,11 +4,11 @@
 #
 
 type
-  SemaphoreRequest* {.pure.} = object
+  SemaphoreRequest* {.bycopy.} = object
     link*: MinNode
     waiter*: ptr Task
 
-  SignalSemaphore* {.pure.} = object
+  SignalSemaphore* {.bycopy.} = object
     link*: Node
     nestCount*: int16
     waitQueue*: MinList
@@ -16,7 +16,7 @@ type
     owner*: ptr Task
     queueCount*: int16
 
-  SemaphoreMessage* {.pure.} = object
+  SemaphoreMessage* {.bycopy.} = object
     message*: Message
     semaphore*: ptr SignalSemaphore
 

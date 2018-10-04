@@ -4,7 +4,7 @@
 #
 
 type
-  Library* {.pure.} = object
+  Library* {.bycopy.} = object
     node*: Node
     flags*: uint8
     pad: uint8

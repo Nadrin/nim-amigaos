@@ -4,11 +4,11 @@
 #
 
 type
-  MemChunk* {.pure.} = object
+  MemChunk* {.bycopy.} = object
     next*: ptr MemChunk
     bytes*: uint32
 
-  MemHeader* {.pure.} = object
+  MemHeader* {.bycopy.} = object
     node*: Node
     attributes*: uint16
     first*: ptr MemChunk
@@ -16,19 +16,19 @@ type
     upper*: pointer
     free*: uint32
 
-  MemEntry* {.pure.} = object
+  MemEntry* {.bycopy.} = object
     un*: MemEntryUn
     length*: uint32
-  MemEntryUn* {.pure union.} = object
+  MemEntryUn* {.union.} = object
     reqs*: uint32
     `addr`*: pointer
 
-  MemList* {.pure.} = object
+  MemList* {.bycopy.} = object
     node*: Node
     numEntries*: uint16
     ME*: array[1, MemEntry]
 
-  MemHandlerData* {.pure.} = object
+  MemHandlerData* {.bycopy.} = object
     requestSize*: uint32
     requestFlags*: uint32
     flags*: uint32

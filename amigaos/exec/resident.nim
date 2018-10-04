@@ -4,7 +4,7 @@
 #
 
 type
-  Resident* {.pure.} = object
+  Resident* {.bycopy.} = object
     matchWord*: uint16
     matchTag*: ptr Resident
     endSkip*: pointer

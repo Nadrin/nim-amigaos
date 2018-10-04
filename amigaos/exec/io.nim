@@ -4,7 +4,7 @@
 #
 
 type
-  IORequest* {.pure.} = object
+  IORequest* {.bycopy.} = object
     message*: Message
     device*: Device
     unit*: Unit
@@ -12,7 +12,7 @@ type
     flags*: uint8
     error*: int8
 
-  IOStdReq* {.pure.} = object
+  IOStdReq* {.bycopy.} = object
     message*: Message
     device*: Device
     unit*: Unit

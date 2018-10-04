@@ -4,17 +4,17 @@
 #
 
 type
-  Interrupt* {.pure.} = object
+  Interrupt* {.bycopy.} = object
     node*: Node
     data*: pointer
     code*: proc() {.noconv.}
 
-  IntVector* {.pure.} = object
+  IntVector* {.bycopy.} = object
     data*: pointer
     code*: proc() {.noconv.}
     node*: Node
 
-  SoftIntList* {.pure.} = object
+  SoftIntList* {.bycopy.} = object
     list*: List
     pad: uint16
 

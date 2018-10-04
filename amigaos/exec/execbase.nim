@@ -4,7 +4,7 @@
 #
 
 type
-  ExecBase* {.pure.} = object
+  ExecBase* {.bycopy.} = object
     libNode*: Library
     softVer*: uint16
     lowMemChkSum*: int16

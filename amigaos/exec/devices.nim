@@ -4,10 +4,10 @@
 #
 
 type
-  Device* {.pure.} = object
+  Device* {.bycopy.} = object
     library*: Library
 
-  Unit* {.pure.} = object
+  Unit* {.bycopy.} = object
     msgPort*: MsgPort
     flags*: uint8
     pad: uint8

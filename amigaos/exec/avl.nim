@@ -4,7 +4,7 @@
 #
 
 type
-  AVLNode* {.pure.} = object
+  AVLNode* {.bycopy.} = object
     reserved: array[4, uint32]
 
   AVLKey = pointer

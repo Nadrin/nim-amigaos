@@ -4,14 +4,14 @@
 #
 
 type
-  List* {.pure.} = object
+  List* {.bycopy.} = object
     head*: ptr Node
     tail*: ptr Node
     tailPred*: ptr Node
     `type`*: uint8
     pad: uint8
 
-  MinList* {.pure.} = object
+  MinList* {.bycopy.} = object
     head*: ptr MinNode
     tail*: ptr MinNode
     tailPred*: ptr MinNode

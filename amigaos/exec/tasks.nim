@@ -4,7 +4,7 @@
 #
 
 type
-  Task* {.pure.} = object
+  Task* {.bycopy.} = object
     node*: Node
     flags*: uint8
     state*: uint8
@@ -28,7 +28,7 @@ type
     memEntry*: List
     userData*: pointer
 
-  StackSwapStruct* {.pure.} = object
+  StackSwapStruct* {.bycopy.} = object
     lower*: pointer
     upper*: pointer
     `pointer`*: pointer

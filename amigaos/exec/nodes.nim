@@ -4,13 +4,13 @@
 #
 
 type
-  Node* {.pure.} = object
+  Node* {.bycopy.} = object
     succ*, pred*: ptr Node
     `type`*: uint8
     pri*: int8
     name*: cstring
 
-  MinNode* {.pure.} = object
+  MinNode* {.bycopy.} = object
     succ*, pred*: ptr MinNode
 
 const

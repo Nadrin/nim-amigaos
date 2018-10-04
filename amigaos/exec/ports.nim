@@ -4,14 +4,14 @@
 #
 
 type
-  MsgPort* {.pure.} = object
+  MsgPort* {.bycopy.} = object
     node*: Node
     flags*: uint8
     sigBit*: uint8
     sigTask*: pointer
     msgList*: List
 
-  Message* {.pure.} = object
+  Message* {.bycopy.} = object
     node*: Node
     replyPort*: MsgPort
     length*: uint16
