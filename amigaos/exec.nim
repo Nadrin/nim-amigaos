@@ -1,22 +1,25 @@
 #
-#         AmigaOS 3 API bindings for Nim
-#        (c) Copyright 2018 Michał Siejak
+#     AmigaOS 3 API bindings for Nim
+#    (c) Copyright 2018 Michał Siejak
 #
 
 ## AmigaOS 3 API: Exec library
 
+include exec/alerts
+include exec/errors
 include exec/nodes
+include exec/lists
 include exec/libraries
 include exec/resident
 include exec/interrupts
 include exec/memory
-include exec/lists
 include exec/ports
 include exec/tasks
 include exec/devices
 include exec/io
 include exec/semaphores
 include exec/avl
+include exec/execbase
 
 const exec_h = "<proto/exec.h>"
 
