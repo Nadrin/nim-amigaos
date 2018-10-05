@@ -17,9 +17,9 @@ type
     free*: uint32
 
   MemEntry* {.bycopy.} = object
-    un*: MemEntryUn
+    un*: MemEntryUnion
     length*: uint32
-  MemEntryUn* {.union.} = object
+  MemEntryUnion* {.bycopy.} = object {.union.}
     reqs*: uint32
     `addr`*: pointer
 
