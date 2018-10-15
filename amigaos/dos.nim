@@ -9,6 +9,8 @@ import exec
 import utility
 import devices
 
+import ospaths
+
 include dos/dos
 include dos/dosextens
 include dos/dosasl
@@ -25,11 +27,6 @@ include dos/stdio
 
 const DefaultBufSize = 256
 const dos_h = "<proto/dos.h>"
-
-# TODO: Temp!
-type OSErrorCode* = distinct int
-func raiseOSError(err: OSErrorCode) {.raises: [OSError].} =
-  raise newException(OSError, "Unimplemented")
 
 proc c_open(name: cstring, accessMode: int): bpointer {.header: dos_h, importc: "Open".}
 proc open*(name: cstring, accessMode: AccessMode): bpointer {.inline.} =
