@@ -6,6 +6,6 @@
 type
   Hook* {.bycopy.} = object
     minNode*: MinNode
-    entry*: func(): uint32 {.noconv.}
-    subEntry*: func(): uint32 {.noconv.}
+    entry*: proc(): uint {.noconv.}
+    subEntry*: proc(): uint {.noconv.}
     data*: pointer
