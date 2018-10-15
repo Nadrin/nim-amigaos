@@ -8,5 +8,5 @@
 when not defined(amiga):
     {.fatal: "AmigaOS API bindings cannot be used when compiling for non-Amiga platforms".}
 
-import amigaos/exec
-export exec
+import amigaos/[exec, dos, devices, utility]
+export exec, dos, devices, utility

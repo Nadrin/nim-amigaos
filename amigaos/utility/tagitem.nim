@@ -5,10 +5,10 @@
 #
 
 type
-  Tag* = uint32
+  Tag* = uint
   TagItem* {.pure.} = object
     tag*: Tag
-    data*: uint32
+    data*: uint
 
 const
   TAG_DONE* = 0
