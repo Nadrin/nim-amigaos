@@ -5,6 +5,8 @@
 
 ## Amiga OS 3 API: Intuition library
 
+{.passC: "-DINTUI_V36_NAMES_ONLY".}
+
 import exec
 import hardware
 import devices
