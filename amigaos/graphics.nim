@@ -11,6 +11,7 @@ import utility
 
 include graphics/gfx
 include graphics/gfxnodes
+include graphics/gfxmacros
 include graphics/text
 include graphics/gels
 include graphics/clip
