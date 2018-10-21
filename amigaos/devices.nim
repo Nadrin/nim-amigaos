@@ -6,5 +6,8 @@
 ## Amiga OS 3 API: Devices
 
 import exec
+import utility
 
 include devices/timer
+include devices/inputevent
+include devices/keymap
