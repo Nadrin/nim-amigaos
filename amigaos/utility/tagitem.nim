@@ -11,12 +11,12 @@ type
     data*: uint
 
 const
-  TAG_DONE* = 0
-  TAG_END* = 0
-  TAG_IGNORE* = 1
-  TAG_MORE* = 2
-  TAG_SKIP* = 3
-  TAG_USER* = 0x80000000
+  TAG_DONE* = Tag(0)
+  TAG_END* = Tag(0)
+  TAG_IGNORE* = Tag(1)
+  TAG_MORE* = Tag(2)
+  TAG_SKIP* = Tag(3)
+  TAG_USER* = Tag(0x80000000)
 
 const
   TAGFILTER_AND* = 0

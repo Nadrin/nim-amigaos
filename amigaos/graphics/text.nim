@@ -100,7 +100,7 @@ type
     extent*: Rectangle
   
 const
-  TA_DeviceDPI* = (1 or TAG_USER)
+  TA_DeviceDPI* = (Tag(1) or TAG_USER)
 
 const
   MAXFONTMATCHWEIGHT* = 32767
